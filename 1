@@ -1,0 +1,39 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int limit;
+    printf("Enter the limit for the arrays\n");
+    scanf(" %d",&limit);
+    int array_one[limit];
+    printf("Enter the values for the first array\n");
+    for(int i=0;i<limit;i++)
+    {
+         scanf("%d",&array_one[i]);
+    }
+    int array_two[limit];
+     printf("Enter the values for the second array\n");
+    for(int i=0;i<limit;i++)
+    {
+         scanf("%d",&array_two[i]);
+    }
+    int temp[limit];
+    for(int i=0;i<limit;i++)
+    {
+        temp[i]=array_one[i];
+        array_one[i]=array_two[i];
+        array_two[i]=temp[i];
+    }
+    printf("The arrays have been swapped\n");
+    printf("The values of the first array are:\n");
+    for(int i=0;i<limit;i++)
+    {
+        printf("%d\n",array_one[i]);
+    }
+     printf("The values of the second array are:\n");
+    for(int i=0;i<limit;i++)
+    {
+        printf("%d\n",array_two[i]);
+    }
+    return 0;
+}
